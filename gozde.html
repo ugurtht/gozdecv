@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gözde Tahta – CV</title>
+  <meta name="description" content="Gözde Tahta – Uzman Biyolog ve Biyoloji Öğretmeni özgeçmişi.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    :root {
+      --bg: #0d1117;
+      --card-bg: #161b22;
+      --item-bg: #21262d;
+      --border: #30363d;
+      --gold: #f0a500;
+      --gold-bg: rgba(240, 165, 0, .15);
+      --text: #e6edf3;
+      --text-bold: #ffffff;
+      --muted: #8b949e;
+      --accent: #58a6ff;
+      --hero-grad: linear-gradient(135deg, #0d1117 0%, #1a2332 50%, #0d1117 100%);
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    body.light-mode {
+      --bg: #f0f2f5;
+      --card-bg: #ffffff;
+      --item-bg: #f8f9fa;
+      --border: #d0d7de;
+      --gold: #9a6700;
+      --gold-bg: rgba(154, 103, 0, 0.1);
+      --text: #111827;
+      --text-bold: #000000;
+      --muted: #374151;
+      --accent: #0969da;
+      --hero-grad: linear-gradient(135deg, #ffffff 0%, #f6f8fa 50%, #ffffff 100%);
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    /* ── WRAPPER ── */
+    .cv {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      min-height: 100vh;
+      box-shadow: var(--shadow);
+      transition: background 0.3s;
+    }
+
+    /* ── HEADER ── */
+    .hero {
+      background: var(--hero-grad);
+      padding: 44px 48px 36px;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+      transition: background 0.3s;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, rgba(240, 165, 0, .12) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero-inner {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .photo-wrap {
+      flex-shrink: 0;
+    }
+
+    .photo-wrap img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--gold);
+      box-shadow: 0 0 0 6px rgba(240, 165, 0, .15);
+      display: block;
+    }
+
+    .hero-text h1 {
+      font-size: 33px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: var(--text-bold);
+      line-height: 1.15;
+    }
+
+    .hero-text .role {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .role-badge {
+      background: var(--gold-bg);
+      color: var(--gold);
+      border: 1px solid rgba(240, 165, 0, .3);
+      border-radius: 20px;
+      padding: 3px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .3px;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13.5px;
+      color: var(--muted);
+    }
+
+    .contact-item span.ico {
+      font-size: 15px;
+    }
+
+    .contact-item a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .contact-item a:hover {
+      color: var(--accent);
+    }
+
+    /* ── BODY GRID ── */
+    .body-grid {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+    }
+
+    .col-main {
+      padding: 36px 40px;
+      border-right: 1px solid var(--border);
+    }
+
+    .col-side {
+      padding: 36px 28px;
+    }
+
+    /* ── SECTION HEADING ── */
+    .sec-title {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--gold);
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sec-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(240, 165, 0, .4), transparent);
+    }
+
+    .section {
+      margin-bottom: 36px;
+    }
+
+    /* ── SUMMARY ── */
+    .summary {
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.75;
+      text-align: justify;
+      background: var(--item-bg);
+      border-left: 3px solid var(--gold);
+      padding: 14px 18px;
+      border-radius: 0 8px 8px 0;
+    }
+
+    /* ── EXPERIENCE TIMELINE ── */
+    .timeline {
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 5px;
+      top: 6px;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(180deg, var(--gold), transparent);
+    }
+
+    .tl-item {
+      position: relative;
+      margin-bottom: 26px;
+    }
+
+    .tl-dot {
+      position: absolute;
+      left: -20px;
+      top: 4px;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--gold);
+      border: 2px solid var(--card-bg);
+      box-shadow: 0 0 0 3px var(--gold-bg);
+    }
+
+    .tl-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 2px;
+    }
+
+    .tl-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-bold);
+    }
+
+    .tl-date {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .tl-company {
+      font-size: 12.5px;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 7px;
+    }
+
+    .tl-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .tl-desc ul {
+      padding-left: 16px;
+      margin-top: 5px;
+    }
+
+    .tl-desc li {
+      margin-bottom: 4px;
+    }
+
+    /* ── PROJECT CARD (referanslar için de kullanılır) ── */
+    .project-card {
+      background: var(--item-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 18px;
+      margin-bottom: 14px;
+      transition: border-color .2s, background 0.3s;
+    }
+
+    .project-card:hover {
+      border-color: var(--gold);
+    }
+
+    .pc-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 6px;
+    }
+
+    .pc-title {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--text-bold);
+    }
+
+    .pc-date {
+      font-size: 12px;
+      color: var(--gold);
+      font-weight: 600;
+      white-space: nowrap;
+      background: rgba(240, 165, 0, .1);
+      border: 1px solid rgba(240, 165, 0, .2);
+      padding: 2px 10px;
+      border-radius: 20px;
+      flex-shrink: 0;
+    }
+
+    .pc-desc {
+      font-size: 13.5px;
+      color: var(--muted);
+    }
+
+    .pc-meta {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .pc-meta span {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    /* ── SIDE: SKILLS ── */
+    .skill-block {
+      margin-bottom: 20px;
+    }
+
+    .skill-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .8px;
+      margin-bottom: 8px;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .stag {
+      background: var(--item-bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      border-radius: 6px;
+      padding: 4px 10px;
+      font-size: 12.5px;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+
+    .stag.gold {
+      background: rgba(240, 165, 0, .1);
+      border-color: rgba(240, 165, 0, .25);
+      color: var(--gold);
+    }
+
+    /* ── SIDE: EDU + CERT ── */
+    .edu-item,
+    .cert-item {
+      margin-bottom: 14px;
+      padding: 12px 14px;
+      background: var(--item-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .edu-item h4,
+    .cert-item h4 {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--text-bold);
+      margin-bottom: 3px;
+    }
+
+    .edu-item p,
+    .cert-item p {
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+
+    /* ── SIDE: PERSONAL INFO ── */
+    .info-card {
+      background: var(--item-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      transition: background 0.3s;
+    }
+
+    .info-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 9px 14px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .info-row:last-child {
+      border-bottom: none;
+    }
+
+    .info-key {
+      font-size: 11.5px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      min-width: 70px;
+      flex-shrink: 0;
+      padding-top: 1px;
+    }
+
+    .info-val {
+      font-size: 13px;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .info-val small {
+      display: block;
+      font-size: 11.5px;
+      color: var(--muted);
+      font-weight: 400;
+      margin-top: 2px;
+    }
+
+    .info-val a {
+      color: var(--accent);
+      text-decoration: none;
+      word-break: break-all;
+    }
+
+    /* ── REFERANS KARTLARI ── */
+    .ref-card {
+      background: var(--item-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+      transition: border-color .2s, background 0.3s;
+    }
+
+    .ref-card:hover {
+      border-color: var(--gold);
+    }
+
+    .ref-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-bold);
+      margin-bottom: 3px;
+    }
+
+    .ref-title {
+      font-size: 12px;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .ref-row {
+      font-size: 12px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 2px;
+    }
+
+    /* ── CONTROLS ── */
+    .controls {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      gap: 10px;
+      z-index: 1000;
+    }
+
+    .btn-control {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--card-bg);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 18px;
+      transition: all 0.2s;
+      box-shadow: var(--shadow);
+    }
+
+    .btn-control:hover {
+      border-color: var(--gold);
+      transform: translateY(-2px);
+    }
+
+    .btn-control.pdf {
+      width: auto;
+      padding: 0 16px;
+      background: var(--gold);
+      color: #fff;
+      border-color: var(--gold);
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .hero-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 24px;
+      }
+
+      .photo-wrap img {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+      }
+
+      .hero-text h1 {
+        font-size: 28px;
+      }
+
+      .role {
+        justify-content: center;
+      }
+
+      .contact-row {
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .body-grid {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .col-main {
+        display: contents;
+      }
+
+      .sec-summary {
+        order: 1;
+        padding: 30px 20px 10px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .col-side {
+        order: 2;
+        padding: 20px 20px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .sec-experience {
+        order: 3;
+        padding: 30px 20px 10px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .sec-references {
+        order: 4;
+        padding: 30px 20px;
+      }
+
+      .col-main {
+        border-right: none;
+      }
+
+      .controls {
+        top: 10px;
+        right: 10px;
+        gap: 8px;
+      }
+
+      .btn-control {
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+      }
+
+      .btn-control.pdf {
+        padding: 0 12px;
+        font-size: 11px;
+      }
+    }
+
+    /* ── PRINT ── */
+    @media print {
+      body {
+        background: #fff !important;
+        color: #000 !important;
+      }
+
+      .controls {
+        display: none !important;
+      }
+
+      .cv {
+        background: #fff !important;
+        box-shadow: none !important;
+        max-width: 100% !important;
+      }
+
+      .hero {
+        background: var(--hero-grad) !important;
+        border-bottom: 1px solid #eee !important;
+      }
+
+      .project-card,
+      .edu-item,
+      .cert-item,
+      .info-card,
+      .ref-card {
+        background: #fcfcfc !important;
+        border-color: #eee !important;
+      }
+
+      .stag {
+        border-color: #eee !important;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="controls">
+    <button class="btn-control theme-toggle" id="theme-btn" onclick="toggleTheme()" title="Tema Değiştir">
+      <span id="theme-icon">🌙</span>
+    </button>
+    <a href="Gözde_Tahta_Cv.pdf" download class="btn-control pdf" title="PDF İndir">
+      PDF İndir
+    </a>
+  </div>
+
+  <div class="cv">
+
+    <!-- HERO HEADER -->
+    <header class="hero">
+      <div class="hero-inner">
+        <div class="photo-wrap">
+          <img src="gozde_foto.jpg" alt="Gözde Tahta">
+        </div>
+        <div class="hero-text">
+          <h1>Gözde Tahta</h1>
+          <div class="role">
+            <span class="role-badge">Uzman Biyolog</span>
+            <span class="role-badge">Biyoloji Öğretmeni</span>
+            <span class="role-badge">Kemoterapi Ekip Lideri</span>
+          </div>
+          <div class="contact-row">
+            <span class="contact-item"><span class="ico">📞</span>+90 (539) 934 75 27</span>
+            <span class="contact-item"><span class="ico">✉️</span>gozdekhuseyin@gmail.com</span>
+            <span class="contact-item"><span class="ico">📍</span>İzmir, Bayraklı</span>
+            <span class="contact-item"><span class="ico">🔗</span><a href="https://www.linkedin.com/in/g%C3%B6zde-t" target="_blank">LinkedIn Profili</a></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- BODY -->
+    <div class="body-grid">
+
+      <!-- MAIN COLUMN -->
+      <main class="col-main">
+
+        <!-- ÖZET -->
+        <section class="section sec-summary">
+          <div class="sec-title">Profesyonel Özet</div>
+          <p class="summary">
+            Anadolu Üniversitesi Biyoloji bölümü mezunu; Sağlık Kurumları İşletmeciliği ön lisans ve Pedagojik
+            Formasyon sertifikasına da sahip çok yönlü bir sağlık profesyoneliyim. Kariyerime hasta yönetimi
+            alanında başlayıp kemoterapi ve parenteral beslenme ilaç hazırlama birimlerine uzmanlaşarak Acıbadem ve
+            İEÜ Medicalpoint gibi prestijli hastanelerde 10 yılı aşkın deneyim kazandım. İEÜ Medicalpoint
+            Hastanesi'nde Kemoterapi Manuel-Robotik İlaç Hazırlama Birimi'nde ekip lideri olarak görev yaptım.
+            Aseptik teknikler, robotik ilaç hazırlama sistemleri, TPN dolumu ve onkoloji protokolleri konularında
+            derin uzmanlığa sahibim. Titizlik, sorumluluk bilinci ve hasta güvenliğini ön planda tutarak çalışmayı
+            temel prensibim olarak benimsiyorum.
+          </p>
+        </section>
+
+        <!-- DENEYİM -->
+        <section class="section sec-experience">
+          <div class="sec-title">İş Deneyimleri</div>
+          <div class="timeline">
+
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-header">
+                <span class="tl-title">Uzman Biyolog &amp; Kemoterapi Ekip Lideri</span>
+                <span class="tl-date">Kasım 2015 – Ekim 2025</span>
+              </div>
+              <div class="tl-company">İEÜ Medicalpoint Hastanesi · Tam Zamanlı · Sağlık Departmanı</div>
+              <div class="tl-desc">
+                <ul>
+                  <li>Kemoterapi Manuel-Robotik İlaç Hazırlama Birimi'nde biyolog ekibinin <strong>Ekip Lideri</strong> olarak görev yaptı.</li>
+                  <li>Pozitif basınçlı, laminar (dikey) hava akımlı ve HEPA filtreli temiz odaya sahip Nutrisyon ünitesinde çalıştı.</li>
+                  <li>Yenidoğan yoğun bakım hastalarının TPN dolumlarını <strong>Baxa Exacta-Mix EM2400</strong> TPN Dolum sistemi ile aseptik tekniklerle hazırladı.</li>
+                  <li>Parenteral solüsyonların hazırlanmasında hasta kimlik ve içerik kontrollerini titizlikle yönetti.</li>
+                  <li>İlaçların stabilite süresi, saklama ve güvenli transfer süreçlerini standartlara uygun yürüttü.</li>
+                  <li><strong>Medin HBYS</strong> sistemi üzerinden ilaç ve sarf malzeme transferi ile stok takibini raporladı.</li>
+                  <li>Manuel ve kapalı sistem aparatlar (Phaseal) ile kemoterapi ilaç hazırlama ve <strong>Apoteca Robotik</strong> süreçlerini yürüttü.</li>
+                  <li>Hasta katlarının order hazırlıklarını koordine etti; ilaç hazırlama ortamının temizlik ve dezenfeksiyonunu sağladı.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-header">
+                <span class="tl-title">Stajyer Öğretmen</span>
+                <span class="tl-date">Ekim 2015 – Ocak 2016</span>
+              </div>
+              <div class="tl-company">Eskişehir Kılıçoğlu Anadolu Lisesi · Stajyer · Eğitim Departmanı</div>
+              <div class="tl-desc">
+                <ul>
+                  <li>Pedagojik Formasyon Eğitimi kapsamındaki Öğretmenlik Uygulaması dersi dahilinde 12 hafta boyunca aktif derse katılım sağladı.</li>
+                  <li>Sınıf yönetimi, öğretim metodolojileri ve eğitim materyali kullanımı konularında mesleki kazanımlar edindi.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-header">
+                <span class="tl-title">Biyolog / Eczane Teknisyeni</span>
+                <span class="tl-date">Nisan 2014 – Ağustos 2015</span>
+              </div>
+              <div class="tl-company">Acıbadem Maslak Hastanesi · Tam Zamanlı · Sağlık Departmanı</div>
+              <div class="tl-desc">
+                <ul>
+                  <li>"Eczane Teknisyeni-Biyolog" ortak unvanı ve yetkinliği altında görevlerini yürüttü.</li>
+                  <li>Kemoterapi ilaçlarının manuel hazırlama süreçlerini üstlendi.</li>
+                  <li>Yüksek riskli elektrolit içeren serumlar ve TPN dolumlarını hazırladı.</li>
+                  <li><strong>Pyxis</strong> otomatik ilaç yönetim sistemine ilaç dolumu ve hazırlama süreçlerini yönetti.</li>
+                  <li>İlaçların kritik muhafaza koşullarının kontrolünü ve takibini gerçekleştirdi.</li>
+                  <li><strong>Oracle ERP</strong> sistemi üzerinden tedarikçi faturalarının satın alma ve teslim alma işlemlerini yürüttü.</li>
+                  <li>Eczane ve tüm ilaç depolama alanlarında stok yönetimi, yerleşim ve genel düzeni sağladı.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-header">
+                <span class="tl-title">Hasta Yatış Çıkış Yetkilisi</span>
+                <span class="tl-date">Eylül 2013 – Nisan 2014</span>
+              </div>
+              <div class="tl-company">Universal Aksaray Vatan Hastanesi · İstanbul (Avrupa) · Tam Zamanlı</div>
+              <div class="tl-desc">
+                <ul>
+                  <li>Doktor randevularının takibi ve organizasyonunu sağladı.</li>
+                  <li>Ameliyat öncesi hasta hazırlıklarının (kan tahlilleri, EKG, akciğer filmi vb.) eksiksiz yürütülmesini koordine etti.</li>
+                  <li><strong>Tipplus HBYS</strong> sistemi üzerinden SGK ve anlaşmalı kurumlar dahilinde hasta yatış ve taburculuk süreçlerini yönetti.</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- REFERANSLAR -->
+        <section class="section sec-references">
+          <div class="sec-title">Referanslar</div>
+
+          <div class="ref-card">
+            <div class="ref-name">Adem Yılmaz</div>
+            <div class="ref-title">Eczacı / Yönetici · İEÜ Medicalpark Hastanesi</div>
+            <div class="ref-row"><span class="ico">✉️</span>adem.yilmaz@medicalpark.com.tr</div>
+            <div class="ref-row"><span class="ico">📞</span>+90 (554) 871 04 79</div>
+          </div>
+
+          <div class="ref-card">
+            <div class="ref-name">Özlem Koç</div>
+            <div class="ref-title">Eczacı Teknisyeni / İş Arkadaşı · İEÜ Medicalpark Hastanesi</div>
+            <div class="ref-row"><span class="ico">✉️</span>kozlem365@gmail.com</div>
+            <div class="ref-row"><span class="ico">📞</span>+90 (538) 840 94 84</div>
+          </div>
+
+          <div class="ref-card">
+            <div class="ref-name">Öznur Emire</div>
+            <div class="ref-title">Klinik Araştırma Koordinatörü / Aile Bireyi · MyCro Sağlık Hizmetleri Danışmanlık Şirketi</div>
+            <div class="ref-row"><span class="ico">✉️</span>oznur.emire@mycro.com.tr</div>
+            <div class="ref-row"><span class="ico">📞</span>+90 (531) 291 19 14</div>
+          </div>
+
+        </section>
+
+      </main>
+
+      <!-- SIDE COLUMN -->
+      <aside class="col-side">
+
+        <!-- KİŞİSEL BİLGİLER -->
+        <section class="section">
+          <div class="sec-title">Kişisel Bilgiler</div>
+          <div class="info-card">
+            <div class="info-row">
+              <span class="info-key">Doğum</span>
+              <span class="info-val">1990 <small>(36 Yaş)</small></span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Cinsiyet</span>
+              <span class="info-val">Kadın</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Vatandaşlık</span>
+              <span class="info-val">T.C.</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Ehliyet</span>
+              <span class="info-val">Yok</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- YETKİNLİKLER -->
+        <section class="section">
+          <div class="sec-title">Yetkinlikler</div>
+
+          <div class="skill-block">
+            <div class="skill-label">Klinik &amp; Laboratuvar</div>
+            <div class="skill-tags">
+              <span class="stag gold">Kemoterapi Hazırlama</span>
+              <span class="stag gold">TPN Dolumu</span>
+              <span class="stag gold">Aseptik Teknikler</span>
+              <span class="stag gold">Temiz Oda</span>
+            </div>
+          </div>
+
+          <div class="skill-block">
+            <div class="skill-label">Robotik &amp; Sistemler</div>
+            <div class="skill-tags">
+              <span class="stag">Apoteca Robot</span>
+              <span class="stag">Baxa EM2400</span>
+              <span class="stag">Pyxis Sistemi</span>
+              <span class="stag">Phaseal</span>
+            </div>
+          </div>
+
+          <div class="skill-block">
+            <div class="skill-label">Hastane Yazılımları</div>
+            <div class="skill-tags">
+              <span class="stag">Medin HBYS</span>
+              <span class="stag">Tipplus HBYS</span>
+              <span class="stag">Oracle ERP</span>
+              <span class="stag">Abacus TPN</span>
+            </div>
+          </div>
+
+          <div class="skill-block">
+            <div class="skill-label">Genel</div>
+            <div class="skill-tags">
+              <span class="stag">Stok Yönetimi</span>
+              <span class="stag">Ekip Liderliği</span>
+              <span class="stag">Bilgisayar</span>
+              <span class="stag">İngilizce</span>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- EĞİTİM -->
+        <section class="section">
+          <div class="sec-title">Eğitim</div>
+          <div class="edu-item">
+            <h4>Anadolu Üniversitesi</h4>
+            <p>Fen Fakültesi · Biyoloji</p>
+            <p>Lisans · Diploma Notu: 73.5/100</p>
+            <p>Eylül 2008 – Haziran 2013</p>
+          </div>
+          <div class="edu-item">
+            <h4>Anadolu Üniversitesi</h4>
+            <p>Açıköğretim · Sağlık Kurumları İşletmeciliği</p>
+            <p>Ön Lisans</p>
+            <p>Eylül 2011 – Ağustos 2014</p>
+          </div>
+          <div class="edu-item">
+            <h4>Alaplı Anadolu Lisesi</h4>
+            <p>Fen Bilimleri</p>
+            <p>Mezuniyet: Haziran 2008</p>
+          </div>
+        </section>
+
+        <!-- SERTİFİKALAR -->
+        <section class="section">
+          <div class="sec-title">Sertifikalar</div>
+          <div class="cert-item">
+            <h4>Hijyen Eğitim Sertifikası</h4>
+            <p>Eko Global İSG &nbsp;·&nbsp; Şubat 2016</p>
+          </div>
+          <div class="cert-item">
+            <h4>Pedagojik Formasyon Sertifikası</h4>
+            <p>Anadolu Üniversitesi Eğitim Fakültesi &nbsp;·&nbsp; Ocak 2016</p>
+          </div>
+          <div class="cert-item">
+            <h4>Aseptik İlaç Hazırlama &amp; TPN Eğitimi</h4>
+            <p>Meyra İlaç ve Sağlık Ürünleri &nbsp;·&nbsp; Aralık 2015</p>
+          </div>
+          <div class="cert-item">
+            <h4>Abacus TPN Software Eğitimi</h4>
+            <p>Meyra İlaç ve Sağlık Ürünleri &nbsp;·&nbsp; Aralık 2015</p>
+          </div>
+          <div class="cert-item">
+            <h4>BAXA Exacta-mix EM2400 Eğitimi</h4>
+            <p>Meyra İlaç ve Sağlık Ürünleri &nbsp;·&nbsp; Aralık 2015</p>
+          </div>
+          <div class="cert-item">
+            <h4>Antineoplastik İlaç Hazırlama &amp; Robotik Sistemler Eğitimi</h4>
+            <p>Onkofar Sağlık Ürünleri Ltd. &nbsp;·&nbsp; Kasım 2015</p>
+          </div>
+          <div class="cert-item">
+            <h4>Takım Koçluğu &amp; Ekip Performansı</h4>
+            <p>Kerem Gümüşkanatlı Eğitim ve Danışmanlık &nbsp;·&nbsp; Ocak 2015</p>
+          </div>
+        </section>
+
+      </aside>
+    </div><!-- /body-grid -->
+
+  </div><!-- /cv -->
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const icon = document.getElementById('theme-icon');
+
+      if (body.classList.contains('light-mode')) {
+        body.classList.remove('light-mode');
+        icon.innerText = '🌙';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.add('light-mode');
+        icon.innerText = '☀️';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedTheme = localStorage.getItem('theme');
+      const body = document.body;
+      const icon = document.getElementById('theme-icon');
+
+      if (savedTheme === 'light') {
+        body.classList.add('light-mode');
+        if (icon) icon.innerText = '☀️';
+      }
+    });
+  </script>
+</body>
+
+</html>
